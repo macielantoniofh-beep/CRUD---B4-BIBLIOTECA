@@ -13,8 +13,11 @@ while True:
                   "0 - sair\n")
     match opcao:
         case "1":
-            cadastro_livro(biblioteca)
-            break
+            while True:
+                cadastro_livro(biblioteca)
+                continuar = input("Deseja cadastrar outro livro? (s/n)")
+                if continuar != "s" or "S":
+                    break
         case "2":
             print("Livro editado")
         case "3":
