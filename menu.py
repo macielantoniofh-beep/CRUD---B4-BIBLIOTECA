@@ -1,0 +1,28 @@
+from biblioteca_b4 import biblioteca
+from cadastro import cadastro_livro
+
+while True:
+    print("*-*-" * 10)
+    print("Bem-vindo(a) a Biblioteca B4!")
+    print("*-*-" * 10)
+    opcao = input("Escolha uma opção: \n"
+                  "1 - Adicionar um livro \n"
+                  "2 - Editar informações de um livro \n"
+                  "3 - Pesquisar um livro \n"
+                  "4 - Remover um livro \n"
+                  "0 - sair\n")
+    match opcao:
+        case "1":
+            cadastro_livro(biblioteca)
+            break
+        case "2":
+            print("Livro editado")
+        case "3":
+            print("Livro pesquisado")
+        case "4":
+            print("Livro removido")
+        case "0":
+            print("Sistema Finalizado!")
+            break
+        case _:
+            print("Opção invalida, tente novamente")
