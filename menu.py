@@ -19,31 +19,31 @@ while True:
             while True:
                 cadastro_livro(biblioteca)
                 continuar = input("Deseja cadastrar outro livro? (s/n)")
-                if continuar != "s" or "S":
+                if continuar == "s":
                     continue
                 else:
                     break
         case "2":
             while True:
-              update_livro(biblioteca)
-              continuar = input("Deseja atualizar outro livro? (s/n)")
-              if continuar != "s" or "S":
-                continue
-              else:
-                break
+                update_livro(biblioteca)
+                continuar = input("Deseja atualizar outro livro? (s/n)")
+                if continuar.lower() == "s":
+                    continue
+                else:
+                    break
         case "3":
             while True:
                 buscar_livro(biblioteca)
                 continuar = input("Deseja buscar outro livro? (s/n)")
-                if continuar != "s" or "S":
-                  continue
+                if continuar == "s" or "S":
+                    continue
                 else:
-                  break
+                    break
         case "4":
             while True:
                 delete_livro(biblioteca)
                 continuar = input("Deseja deletar outro livro? (s/n)")
-                if continuar != "s" or "S":
+                if continuar == "s" or "S":
                     continue
                 else:
                     break
