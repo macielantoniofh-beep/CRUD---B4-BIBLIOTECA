@@ -1,6 +1,8 @@
 from biblioteca_b4 import biblioteca
 from cadastro import cadastro_livro
 from delete import delete_livro
+from Update import update_livro
+from busca import buscar_livro
 
 while True:
     print("*-*-" * 10)
@@ -18,16 +20,32 @@ while True:
                 cadastro_livro(biblioteca)
                 continuar = input("Deseja cadastrar outro livro? (s/n)")
                 if continuar != "s" or "S":
+                    continue
+                else:
                     break
         case "2":
-            print("Livro editado")
+            while True:
+              update_livro(biblioteca)
+              continuar = input("Deseja atualizar outro livro? (s/n)")
+              if continuar != "s" or "S":
+                continue
+              else:
+                break
         case "3":
-            print("Livro pesquisado")
+            while True:
+                buscar_livro(biblioteca)
+                continuar = input("Deseja buscar outro livro? (s/n)")
+                if continuar != "s" or "S":
+                  continue
+                else:
+                  break
         case "4":
             while True:
                 delete_livro(biblioteca)
                 continuar = input("Deseja deletar outro livro? (s/n)")
                 if continuar != "s" or "S":
+                    continue
+                else:
                     break
         case "0":
             print("Sistema Finalizado!")
