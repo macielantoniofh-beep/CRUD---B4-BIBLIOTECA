@@ -1,5 +1,6 @@
 from biblioteca_b4 import biblioteca
 from cadastro import cadastro_livro
+from delete import delete_livro
 
 while True:
     print("*-*-" * 10)
@@ -23,7 +24,11 @@ while True:
         case "3":
             print("Livro pesquisado")
         case "4":
-            print("Livro removido")
+            while True:
+                delete_livro(biblioteca)
+                continuar = input("Deseja deletar outro livro? (s/n)")
+                if continuar != "s" or "S":
+                    break
         case "0":
             print("Sistema Finalizado!")
             break
