@@ -19,7 +19,7 @@ while True:
         case "1":
             while True:
                 cadastro_livro(biblioteca)
-                if not escolha3():
+                if not escolha():
                     break
         case "2":
             while True:
