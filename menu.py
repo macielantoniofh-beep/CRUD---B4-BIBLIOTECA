@@ -3,6 +3,7 @@ from cadastro import cadastro_livro
 from delete import delete_livro
 from update import update_livro
 from busca import buscar_livro
+from opcao import escolha
 
 while True:
     print("*-*-" * 10)
@@ -18,34 +19,22 @@ while True:
         case "1":
             while True:
                 cadastro_livro(biblioteca)
-                continuar = input("Deseja cadastrar outro livro? (s/n)")
-                if continuar == "s":
-                    continue
-                else:
+                if not escolha3():
                     break
         case "2":
             while True:
                 update_livro(biblioteca)
-                continuar = input("Deseja atualizar outro livro? (s/n)")
-                if continuar.lower() == "s":
-                    continue
-                else:
+                if not escolha():
                     break
         case "3":
             while True:
                 buscar_livro(biblioteca)
-                continuar = input("Deseja buscar outro livro? (s/n)")
-                if continuar == "s" or "S":
-                    continue
-                else:
+                if not escolha():
                     break
         case "4":
             while True:
                 delete_livro(biblioteca)
-                continuar = input("Deseja deletar outro livro? (s/n)")
-                if continuar == "s" or "S":
-                    continue
-                else:
+                if not escolha():
                     break
         case "0":
             print("Sistema Finalizado!")

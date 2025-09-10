@@ -38,6 +38,3 @@ def update_livro(biblioteca):
             print(f"{chave}: {valor}")
     else:
         print(f"\nErro: Livro com ID '{livro_id}' não encontrado na biblioteca.")
-
-
-update_livro(biblioteca)
