@@ -5,6 +5,7 @@ from update import update_livro
 from busca import buscar_livro
 from opcao import escolha
 
+
 while True:
     print("*-*-" * 10)
     print("Bem-vindo(a) a Biblioteca B4!")

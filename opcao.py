@@ -1,4 +1,5 @@
 from biblioteca_b4 import biblioteca
+import sys
 
 def escolha():
     while True:
@@ -9,6 +10,6 @@ def escolha():
                 return True
             case "n" | "N":
                 print("Você escolheu finalizar.")
-                return False
+                sys.exit()
             case _:
                 print("Opção inválida, digite apenas 's' ou 'n'.")
