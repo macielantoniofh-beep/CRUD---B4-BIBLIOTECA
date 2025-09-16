@@ -1,0 +1,16 @@
+class Gestao {
+  +adicionar(objeto): str
+  +editar(objeto): str
+  +pesquisar(objeto): str
+  +remover(objeto): str
+}
+
+class Livros {
+  +id: int
+  +nome: str
+  +autor: str
+  +editora: str
+  +ano: int
+  +genero: str
+  +sinopse: str
+}
