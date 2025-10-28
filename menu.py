@@ -1,8 +1,8 @@
 from biblioteca_b4 import biblioteca
-from cadastro import cadastro_livro
+from cadastro import Cadastro_livro
 from delete import delete_livro
 from update import update_livro
-from busca import buscar_livro
+from busca import Busca
 from opcao import escolha
 
 
@@ -19,7 +19,7 @@ while True:
     match opcao:
         case "1":
             while True:
-                cadastro_livro(biblioteca)
+                Cadastro_livro().cadastro()
                 if not escolha():
                     break
         case "2":
@@ -29,7 +29,7 @@ while True:
                     break
         case "3":
             while True:
-                buscar_livro(biblioteca)
+                Busca(biblioteca).buscar_livro()
                 if not escolha():
                     break
         case "4":
@@ -41,4 +41,4 @@ while True:
             print("Sistema Finalizado!")
             break
         case _:
-            print("Opção invalida, tente novamente")
+            print("Opção invalido")
