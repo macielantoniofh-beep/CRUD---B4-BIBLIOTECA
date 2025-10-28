@@ -1,6 +1,6 @@
 from biblioteca_b4 import biblioteca
 from cadastro import cadastro_livro
-from delete import delete_livro
+from delete import Delete_livro
 from update import update_livro
 from busca import buscar_livro
 from opcao import escolha
@@ -34,7 +34,7 @@ while True:
                     break
         case "4":
             while True:
-                delete_livro(biblioteca)
+                Delete_livro().delete_livro()
                 if not escolha():
                     break
         case "0":
