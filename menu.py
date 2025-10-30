@@ -3,7 +3,7 @@ from cadastro import Cadastro_livro
 from delete import delete_livro
 from update import update_livro
 from busca import Busca
-from opcao import escolha
+from opcao import Opcao
 
 class Menu_biblioteca:
     def __init__(self):
@@ -38,25 +38,25 @@ class Menu_biblioteca:
     def adicionar_livro(self):
         while True:
             Cadastro_livro().cadastro()
-            if not escolha():
+            if not Opcao.escolha():
                 break
 
     def atualiza_livro(self):
         while True:
             update_livro(biblioteca)
-            if not escolha():
+            if not Opcao.escolha():
                 break
 
     def busca_livro(self):
         while True:
             Busca(biblioteca).buscar_livro()
-            if not escolha():
+            if not Opcao.escolha():
                 break
 
     def deleta_livro(self):
         while True:
             delete_livro(biblioteca)
-            if not escolha():
+            if not Opcao.escolha():
                 break
 
 if __name__ == "__main__":

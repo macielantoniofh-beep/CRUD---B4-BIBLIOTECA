@@ -18,4 +18,4 @@ class Busca:
             print("Livro não localizado")
 
     def exibir_livro(self, livro):
-        print(f"O livro pesquisado é ID: {livro["ID"]}, \nNome: {livro["Nome"]}, \nAutor: {livro["Autor"]}, \nAno: {livro["Ano"]}, \nEditora: {livro["Editora"]}, \nGênero: {livro["Gênero"]}, \nSinopse: {livro["Sinopse"]}!")
+        print(f'O livro pesquisado é ID: {livro["ID"]}, \nNome: {livro["Nome"]}, \nAutor: {livro["Autor"]}, \nAno: {livro["Ano"]}, \nEditora: {livro["Editora"]}, \nGênero: {livro["Gênero"]}, \nSinopse: {livro["Sinopse"]}!')
