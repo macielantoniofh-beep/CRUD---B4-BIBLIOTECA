@@ -1,19 +1,21 @@
 from biblioteca_b4 import biblioteca
 
-def delete_livro(biblioteca):
-    if not biblioteca:
-        print("A biblioteca está sem livros")
-        return
+class Deletar:
 
-    try:
-        id_excluido = int(input("Digite o ID do livro que deseja deletar: "))
+    def delete_livro(self):
+        if not biblioteca:
+            print("A biblioteca está sem livros")
+            return
 
-        for livro in biblioteca:
-            if livro["ID"] == id_excluido:
-                biblioteca.remove(livro)
-                print(f"Livro com ID {id_excluido} removido com sucesso!")
-                return
+        try:
+            id_excluido = int(input("Digite o ID do livro que deseja deletar: "))
 
-        print(f"Nenhum livro foi encontrado com o ID {id_excluido}.")
-    except ValueError:
-        print("ID inválido")
+            for livro in biblioteca:
+                if livro["ID"] == id_excluido:
+                    biblioteca.remove(livro)
+                    print(f"Livro com ID {id_excluido} removido com sucesso!")
+                    return
+
+            print(f"Nenhum livro foi encontrado com o ID {id_excluido}.")
+        except ValueError:
+            print("ID inválido")
