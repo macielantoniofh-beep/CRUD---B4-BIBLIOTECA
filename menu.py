@@ -1,7 +1,7 @@
 from biblioteca_b4 import biblioteca
 from cadastro import Cadastro_livro
 from delete import Deletar
-from update import update_livro
+from update import Atualizar
 from busca import Busca
 from opcao import Opcao
 
@@ -43,7 +43,7 @@ class Menu_biblioteca:
 
     def atualiza_livro(self):
         while True:
-            update_livro(biblioteca)
+            Atualizar().update_livro()
             if not Opcao.escolha():
                 break
 
